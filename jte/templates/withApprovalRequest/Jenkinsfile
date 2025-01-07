@@ -1,0 +1,14 @@
+def unsafeScr () {
+    def props = System.getProperties()
+    println(props)
+}
+
+node() {
+  stage('test 1 (no Approval request)') {
+    check_1()
+  }
+
+  stage('test 2 (with Approval request)') {
+    unsafeScr()
+  }
+}

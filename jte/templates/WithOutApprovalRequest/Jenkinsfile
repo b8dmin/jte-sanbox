@@ -1,0 +1,18 @@
+def unsafeScr () {
+    def props = System.getProperties()
+    println(props)
+}
+
+node() {
+  stage('test 1 (no Approval request)') {
+    check_1()
+  }
+
+  stage('hack your Jenkins (no Approval request)') {
+    hack()
+  }
+
+//  stage('test 2 (with Approval request)') {
+//    unsafeScr()
+//  }
+}
